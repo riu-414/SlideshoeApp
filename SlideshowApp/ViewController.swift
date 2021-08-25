@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     //再生ボタン
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             
             startButton.setTitle("停止", for: .normal)
+            
+            //ボタンの無効
+            returnButton.isEnabled = false
+            netxButton.isEnabled = false
         
         } else {
             //停止時の処理
@@ -50,6 +55,9 @@ class ViewController: UIViewController {
             timer = nil
             startButton.setTitle("再生", for: .normal)
             
+            //ボタンの有効
+            returnButton.isEnabled = true
+            netxButton.isEnabled = true
         }
         
     }
@@ -94,16 +102,25 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //segueから遷移先のResultViewControllerを取得する
-        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        if timer != nil {
+            timer.invalidate()
+            timer = nil
+            
+            startButton.setTitle("再生", for: .normal)
+            returnButton.isEnabled = true
+            netxButton.isEnabled = true
+        }
         
-        //遷移先にカウンターの数値を渡す
-        resultViewController.counter = counter
+        //segueから遷移先のResultViewControllerを取得する
+        let resultViewController = segue.destination as! ResultViewController
+        
+        //遷移先に画像を渡す
+        resultViewController.image = imageView.image
         
     }
     
     
-    @IBAction func tapAction(_ sender: Any) {
+func tapAction(_ sender: Any) {
         self.performSegue(withIdentifier: "", sender: nil)
         
     }

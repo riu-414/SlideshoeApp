@@ -11,18 +11,14 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var resultImageView: UIImageView!
     
-    //画像
-    var imageArray:[UIImage] = [UIImage(named:"001")!, UIImage(named:"002")!, UIImage(named:"003")!]
-    
-    //受け取るカウンターの変数
-    var counter: Int = 0
+    var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        resultImageView.image = imageArray[counter]
+        resultImageView.image = image
         
     /*
     // MARK: - Navigation
