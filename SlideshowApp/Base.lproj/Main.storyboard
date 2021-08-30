@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIN-kw-VDu">
-                                <rect key="frame" x="90" y="565" width="31" height="35"/>
+                                <rect key="frame" x="90" y="515" width="31" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ajw-xJ-fK2"/>
                                 </constraints>
@@ -27,14 +27,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEM-X1-y2Z">
-                                <rect key="frame" x="191.5" y="403" width="31" height="359"/>
+                                <rect key="frame" x="191.5" y="303" width="31" height="459"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MI7-Ki-hWg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDn-jf-Y22">
-                                <rect key="frame" x="293" y="567.5" width="31" height="30"/>
+                                <rect key="frame" x="293" y="517.5" width="31" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="slideShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hs0-rQ-oqu"/>
@@ -45,14 +45,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="9Rd-iJ-uyK" appends="YES" id="zmY-LL-af9"/>
+                                    <outletCollection property="gestureRecognizers" destination="9Rd-iJ-uyK" appends="YES" id="9oT-fG-ZbU"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UIN-kw-VDu" firstAttribute="top" secondItem="wuL-IC-KnD" secondAttribute="bottom" constant="150" id="FJf-zB-uVS"/>
+                            <constraint firstItem="UIN-kw-VDu" firstAttribute="top" secondItem="wuL-IC-KnD" secondAttribute="bottom" constant="100" id="FJf-zB-uVS"/>
                             <constraint firstItem="yEM-X1-y2Z" firstAttribute="centerY" secondItem="UIN-kw-VDu" secondAttribute="centerY" id="VO0-hk-vdf"/>
                             <constraint firstItem="yEM-X1-y2Z" firstAttribute="centerY" secondItem="UDn-jf-Y22" secondAttribute="centerY" id="Y3J-UC-csC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yEM-X1-y2Z" secondAttribute="bottom" constant="100" id="e9k-JO-uBp"/>
@@ -64,7 +64,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="wuL-IC-KnD" id="suV-S7-UKk"/>
+                        <outlet property="imageView" destination="wuL-IC-KnD" id="wlk-cF-jRh"/>
                         <outlet property="netxButton" destination="yEM-X1-y2Z" id="dW9-ib-ozu"/>
                         <outlet property="returnButton" destination="UIN-kw-VDu" id="tcs-JA-FlC"/>
                         <outlet property="startButton" destination="UDn-jf-Y22" id="7bB-mx-cDh"/>
@@ -73,7 +73,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9Rd-iJ-uyK">
                     <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="64z-RW-APx"/>
                         <segue destination="hJd-IJ-NuC" kind="show" id="WD2-st-VU0"/>
                     </connections>
                 </tapGestureRecognizer>

@@ -10,11 +10,18 @@ import UIKit
 class ViewController: UIViewController {
 
     //outletの接続
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var netxButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
-    @IBOutlet weak var imageView: UIImageView!
+    
+    //画像
+    var imageArray = [
+        UIImage(named:"001.jpg")!,
+        UIImage(named:"002.jpg")!,
+        UIImage(named:"003.jpg")!,
+    ]
     
     //カウンター
     var counter: Int = 0
@@ -28,12 +35,13 @@ class ViewController: UIViewController {
     //配列に指定するindex
     var nowIndex = 0
     
-    //画像
-    var imageArray:[UIImage] = [UIImage(named:"001")!, UIImage(named:"002")!, UIImage(named:"003")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //画像の表示
+        imageView.image = imageArray[counter]
         
     }
 
